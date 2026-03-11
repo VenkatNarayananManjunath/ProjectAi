@@ -13,7 +13,10 @@ import pandas as pd
 from xgboost import XGBRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+import os
 
+DATA_PATH = os.path.join(os.path.dirname(__file__), "california_housing_train.csv")
+df = pd.read_csv(DATA_PATH)
 # Load dataset
 df = pd.read_csv("california_housing_train.csv")
 
