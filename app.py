@@ -30,9 +30,9 @@ df["Price"] = data.target
 
 
 # Feature Engineering
-df["rooms_per_household"] = df["total_rooms"] / df["households"]
-df["bedrooms_per_room"] = df["total_bedrooms"] / df["total_rooms"]
-df["population_per_household"] = df["population"] / df["households"]
+df["rooms_per_person"] = df["AveRooms"] / df["AveOccup"]
+df["bedrooms_ratio"] = df["AveBedrms"] / df["AveRooms"]
+df["population_density"] = df["Population"] / df["AveOccup"]
 
 features = [
     "housing_median_age",
