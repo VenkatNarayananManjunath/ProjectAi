@@ -20,10 +20,7 @@ import pandas as pd
 data = fetch_california_housing()
 df = pd.DataFrame(data.data, columns=data.feature_names)
 df["Price"] = data.target
-DATA_PATH = os.path.join(os.path.dirname(__file__), "california_housing_train.csv")
-df = pd.read_csv(DATA_PATH)
-# Load dataset
-df = pd.read_csv("california_housing_train.csv")
+
 
 # Feature Engineering
 df["rooms_per_household"] = df["total_rooms"] / df["households"]
