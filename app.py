@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # Load dataset
-df = pd.read_csv("/content/sample_data/california_housing_train.csv")
+df = pd.read_csv("california_housing_train.csv")
 
 # Feature Engineering
 df["rooms_per_household"] = df["total_rooms"] / df["households"]
